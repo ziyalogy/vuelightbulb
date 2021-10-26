@@ -15,4 +15,4 @@ const app = Vue.createApp({
             this.image = stateImage
         }
     }
-})
+    })
