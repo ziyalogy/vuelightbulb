@@ -8,7 +8,7 @@
     <!-- Import Vue.js -->
     <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
   </head>
-  <body>
+  <body :style="{backgroundColor: bodyState.bgColor}">
     <div id="app">
       <div class="bulb-display">
         <div class="bulb-container">
@@ -23,6 +23,7 @@
                 v-for="state in states"
                 :key="state.id"
                 @click="updateImage(state.image)"
+                @click="changeBodyBg(bodyState.bgColor)"
                 :style="{backgroundColor: state.color}"
               >
                 {{ state.name }}
