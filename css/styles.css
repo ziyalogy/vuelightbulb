@@ -1,0 +1,72 @@
+body {
+  background-color: #f2f2f2;
+  margin: 0px auto;
+  font-family: tahoma;
+  width: max-content;
+  color: #282828;
+}
+
+.button {
+  margin: 5px;
+  background-color: #39495c;
+  border-radius: 5px;
+  font-size: 18px;
+  width: 160px;
+  height: 60px;
+  float: right;
+  color: white;
+  padding: 20px;
+}
+
+
+
+.disabledButton {
+  background-color: #d8d8d8;
+  cursor: not-allowed;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 25px;
+}
+
+img {
+  width: 70%;
+  margin: 40px;
+  padding: 15px;
+}
+
+
+.bulb-display {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.bulb-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.bulb-image,
+.bulb-info {
+  width: 40%;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .bulb-image,
+  .bulb-info {
+    margin-left: 10px;
+    width: 100%;
+  }
+
+}

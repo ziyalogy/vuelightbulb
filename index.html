@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Light Bulb</title>
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <div class="bulb-display">
+        <div class="bulb-container">
+          <div class="bulb-image">
+            <img v-bind:src="image">
+            
+          </div>
+          <div class="bulb-info">
+            <h1>{{ title }}</h1>
+            <span>
+              <button class="button" v-for="state in states" 
+              :key="state.id"               
+              @click="updateImage(state.image)"
+              :style="{backgroundColor: state.color}"
+            >{{ state.name }}</button>
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js.js"></script>
+
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>
